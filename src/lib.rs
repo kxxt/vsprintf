@@ -67,7 +67,8 @@ pub unsafe fn vsprintf_raw<V>(format: *const c_char,
     Ok(buffer)
 }
 
-extern {
+#[link(name = "vsprintf", kind = "static")]
+extern "C" {
     fn vsnprintf_wrapper(buffer: *mut u8,
                          size: size_t,
                          format: *const c_char,
