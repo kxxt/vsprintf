@@ -3,6 +3,6 @@ fn main() {
 
     cc::Build::new()
         .file("src/lib.c")
-        .compile("libvsprintf.a");
+        .compile("libvsprintf-c.a");
 }
 
